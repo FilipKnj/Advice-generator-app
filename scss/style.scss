@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope',sans-serif;
+}
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+html{
+    width: 100%;   
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    background-color: $Dark-Blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: $Dark-Grayish-Blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3%;
+    max-width: 500px;
+    width: 4800px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 2rem;
+    #adviceId{
+        margin: 1.5rem 0;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color:$Neon-Green;
+        font-size: 12px;
+    }
+    #adviceText{
+        color:$Light-Cyan;
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
+    .pattern-desktop{
+        margin-bottom: 2rem;
+    }
+    .dice-img-button{
+        border: none;
+        outline:none;
+        cursor: pointer;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        left:50%;
+        top: 90%;
+        transform: translateX(-50%);
+        background:$Neon-Green;
+        &:hover{
+            box-shadow: -1px 3px 47px -2px $Neon-Green;
+        }
+    }
+}
+
+.pattern-mobile{
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+    html{
+        max-width: 100%;
+    }
+    .card{
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .pattern-mobile{
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .pattern-desktop{
+        display: none;
+    }
+}
